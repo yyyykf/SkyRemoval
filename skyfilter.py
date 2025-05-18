@@ -151,7 +151,7 @@ class SkyFilter():
 
         # Filter files to only include images
         img_names = [name for name in img_names if os.path.splitext(name)[1].lower() in ['.jpg', '.png', '.jpeg', '.bmp', '.tif', '.tiff']]
-
+        img_names.sort()
         for idx in range(len(img_names)):
             img_name = img_names[idx]
             print(' -> [%d / %d] processing %s' % (idx+1, len(img_names), img_name))
